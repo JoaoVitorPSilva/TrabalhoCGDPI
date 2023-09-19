@@ -161,13 +161,13 @@ void display() {
     glPushMatrix();
     polarView();
 
-    /// Corpo do carro
+    /// corpo do carro
     glColor3d(0.0, 0.0, 0.0);
     glTranslatef(movimentoCarro, 0, 0);
 
     // Caroceria
     glPushMatrix();
-    glScalef(4.0, 0.6, 1.5);
+    glScalef(3.0, 0.6, 1.2);  // Modificando as dimensões da carroceria
     glutSolidCube(15);
     glPopMatrix();
 
@@ -175,14 +175,14 @@ void display() {
     glPushMatrix();
     glColor3d(0.7, 0.7, 1.0);
     glTranslatef(-5, 12, 0);
-    glScalef(6.666, 0.2, 3);
+    glScalef(5.0, 0.2, 3);
     glutSolidCube(7.5);
     glPopMatrix();
 
     // Janelas
     glColor3d(1.0, 0.7, 1.0);
 
-    //frente
+    // Frente
     glPushMatrix();
     glTranslatef(14, 7, 0);
     glRotatef(90, 0, 45, 0);
@@ -190,46 +190,46 @@ void display() {
     glutSolidCube(15);
     glPopMatrix();
 
-    //direita
+    // Direita
     glPushMatrix();
     glTranslatef(-8, 7.5, 10);
     glRotatef(0, 0, 1, 0);
-    glScalef(3, 0.5, 0.02);
+    glScalef(2.5, 0.5, 0.02);
     glutSolidCube(15);
     glPopMatrix();
 
-    //esquerda
+    // Esquerda
     glPushMatrix();
     glTranslatef(-8, 7.5, -10);
     glRotatef(0, 0, 1, 0);
-    glScalef(3, 0.5, 0.02);
+    glScalef(2.5, 0.5, 0.02);
     glutSolidCube(15);
     glPopMatrix();
 
-    // rodas
+    // Rodas
     glColor3d(0, 0, 0);
 
-    //traseira direita
+    // Traseira direita
     glPushMatrix();
-    glTranslatef(-17, -6, 7.5);
+    glTranslatef(-17, -7, 7.5);  // Ajustando a posição das rodas
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
-    //traseira esquerda
+    // Traseira esquerda
     glPushMatrix();
-    glTranslatef(-17, -6, -7.5);
+    glTranslatef(-17, -7, -7.5);  // Ajustando a posição das rodas
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
-    //dianteira direita
+    // Dianteira direita
     glPushMatrix();
-    glTranslatef(17, -6, 7.5);
+    glTranslatef(17, -7, 7.5);  // Ajustando a posição das rodas
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
-    //dianteira esquerda
+    // Dianteira esquerda
     glPushMatrix();
-    glTranslatef(17, -6, -7.5);
+    glTranslatef(17, -7, -7.5);  // Ajustando a posição das rodas
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
@@ -264,14 +264,14 @@ void display() {
     glTranslatef(pXMove, pYMove, pZMove);
     glRotatef(pXRotate, 1.0f, 0.0f, 0.0f); // rotaçao eixo x
     glRotatef(pYRotate, 0.0f, 1.0f, 0.0f); // rotaçao eixo y
-    glColor3d(0, 0, 1);
+    glColor3d(1, 1, 1);
     glutSolidSphere(2, 100, 100);
 
     // corpo do carriel
     glPushMatrix();
     glTranslatef(0, -2, 0);
     glRotatef(90, 50, 0, 0);
-    glColor3d(0, 0, 1);
+    glColor3d(0, 0, 0);
     glutSolidCylinder(2, 5, 40, 40);
     glPopMatrix();
 
@@ -279,14 +279,14 @@ void display() {
     glPushMatrix();
     glTranslatef(-1, -7, 0);
     glRotatef(90, 50, 0, 0);
-    glColor3d(0, 0, 1);
+    glColor3d(0, 0, 0);
     glutSolidCylinder(0.8, 5, 40, 40);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(1, -7, 0);
     glRotatef(90, 50, 0, 0);
-    glColor3d(0, 0, 1);
+    glColor3d(0, 0, 0);
     glutSolidCylinder(0.8, 5, 40, 40);
     glPopMatrix();
 
@@ -294,14 +294,14 @@ void display() {
     glPushMatrix();
     glTranslatef(-1, -2, 0);
     glRotatef(45, 0, 0, 0);
-    glColor3d(0, 0, 1);
+    glColor3d(0, 0, 5);
     glutSolidCylinder(0.5, 5, 40, 40);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(1, -2, 0);
     glRotatef(45, 0, 0, 0);
-    glColor3d(0, 0, 1);
+    glColor3d(0, 0, 5);
     glutSolidCylinder(0.5, 5, 40, 40);
     glPopMatrix();
 
