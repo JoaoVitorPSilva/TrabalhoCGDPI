@@ -165,13 +165,13 @@ void display() {
     glColor3d(0.0, 0.0, 0.0);
     glTranslatef(movimentoCarro, 0, 0);
 
-    // Caroceria
+    // Carroceria do carro
     glPushMatrix();
-    glScalef(3.0, 0.6, 1.2);  // Modificando as dimensões da carroceria
+    glScalef(3.0, 0.6, 1.2);  
     glutSolidCube(15);
     glPopMatrix();
 
-    // Teto
+    // Teto do carro
     glPushMatrix();
     glColor3d(0.7, 0.7, 1.0);
     glTranslatef(-5, 12, 0);
@@ -211,25 +211,25 @@ void display() {
 
     // Traseira direita
     glPushMatrix();
-    glTranslatef(-17, -7, 7.5);  // Ajustando a posição das rodas
+    glTranslatef(-17, -7, 7.5);  
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
     // Traseira esquerda
     glPushMatrix();
-    glTranslatef(-17, -7, -7.5);  // Ajustando a posição das rodas
+    glTranslatef(-17, -7, -7.5);  
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
     // Dianteira direita
     glPushMatrix();
-    glTranslatef(17, -7, 7.5);  // Ajustando a posição das rodas
+    glTranslatef(17, -7, 7.5);  
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
     // Dianteira esquerda
     glPushMatrix();
-    glTranslatef(17, -7, -7.5);  // Ajustando a posição das rodas
+    glTranslatef(17, -7, -7.5);  
     glutSolidTorus(2, 4, 100, 100);
     glPopMatrix();
 
@@ -311,7 +311,7 @@ void display() {
 
 void myReshape(int winWidth, int winHeight) {
     int tam = winWidth < winHeight ? winWidth : winHeight;
-    glViewport(0, 0, tam, tam); // reset the viewport
+    glViewport(0, 0, tam, tam); 
 }
 
 /*comandos especiais do teclado*/
@@ -393,7 +393,7 @@ void myMotion(int x, int y) {
 }
 
 void init() {
-    // cor de fundo
+    // cor do fundo
     glClearColor(0.53f, 0.81f, 0.92f, 1.0f);
 
     glEnable(GL_COLOR_MATERIAL);
